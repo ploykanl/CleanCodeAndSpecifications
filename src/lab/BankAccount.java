@@ -15,5 +15,10 @@ public class BankAccount {
         // TODO: amount <= 0  -> throw IllegalArgumentException  (input ภายนอก = exception)
         // TODO: assert amount <= balance                        (เงื่อนไขภายใน = assert)
         // TODO: balance ลดลงเท่ากับ amount
+        // TODO: handle exception
+            if (amount<=0) throw new IllegalArgumentException("amount must be <=0");
+        assert amount<=balance:"amount <= balance ";
+        balance -=amount;
+
     }
 }
